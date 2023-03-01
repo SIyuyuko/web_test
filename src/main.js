@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router'; //引入VueRouter
-import router from './router';
+import router from './router';//引入router
 // import Login from "./components/Login.vue";
 // import Pagelost from "./components/Pagelost.vue";
 //关闭Vue的生产提示

@@ -1,17 +1,27 @@
+//路由配置
 import VueRouter from 'vue-router'
 
 const routes = [
   {
     path: '/login',
-    component: {
-      Login: () => import("../components/Login.vue")
-    }
+    component: () => import("../views/Login.vue"),
+    children: [
+      {
+        path: 'userlogin',
+        component: () => import("../components/UserLogin.vue")
+      }
+    ]
   },
   {
-    path: '/pagelost',
-    component: {
-      Pagelost: () => import("../components/Pagelost.vue")
-    }
+    path: '/list',
+    component: () => import("../views/List.vue"),
+    children: [
+      {
+        path: 'TableList',
+        component: () => import('../components/TableList.vue')
+      }
+
+    ]
   }
 ];
 const router = new VueRouter({
@@ -19,5 +29,5 @@ const router = new VueRouter({
 });
 
 export default router;
-export { routes };
+// export { routes };
 

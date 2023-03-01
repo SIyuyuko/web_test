@@ -1,14 +1,24 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/pagelost">Pagelost</router-link>
-    </nav>
-    <router-view></router-view>
+    <header><about-view></about-view> <home-view></home-view></header>
+    <div class="routers">
+      <nav>
+        <router-link to="/login">Login</router-link> |
+        <router-link to="/list">List</router-link>
+      </nav>
+    </div>
+    <div class="contents">
+      <router-view></router-view>
+    </div>
+    <footer></footer>
   </div>
 </template>
 <script>
+// import Login from "./views/Login.vue";
+import AboutView from "./views/AboutView.vue";
+import HomeView from "./views/HomeView.vue";
 export default {
+  components: { AboutView, HomeView },
   //name:'App'
 };
 </script>
