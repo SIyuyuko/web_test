@@ -1,11 +1,11 @@
 <template>
-  <div class="list">
+  <div class="list-page">
     <button @click="isShow=!isShow">显示表格</button>
-    <button @click="list.push(list.length + 1)">添加元素</button>
-    <button @click="list.pop()">删除元素</button>
-    <button @click="list.reverse()">翻转元素</button>
-    <p id="split-line">___________________________________</p>
-    <table id="list" style="border: green solid; margin: auto" v-if="isShow && list.length">
+    <button @click="add">添加元素</button>
+    <button @click="remove">删除元素</button>
+    <button @click="reverse">翻转元素</button>
+    <p class="split-line">___________________________________</p>
+    <table class="list" style="border: green solid; margin: auto" v-if="isShow && list.length">
       <tr v-for="i of list" :key="i">
         <td>{{ i }}</td>
       </tr>
@@ -23,14 +23,20 @@ export default {
     };
   },
   methods: {
-    show() {
-      
+    add() {
+       return this.list.push(this.list.length + 1);
     },
+    remove() {
+      return this.list.pop();
+    },
+    reverse() {
+      return this.list.reverse();
+    }
   },
 };
 </script>
 <style>
-#split-line {
+.split-line {
   color:grey;
   font-weight: bold;
 }

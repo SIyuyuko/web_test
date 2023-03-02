@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div id="Login">
+  <div class="Login">
     <h5>这是一个登录界面</h5>
     <UserLogin></UserLogin>
     <!-- <router-link to="/login/userlogin">用户登录入口</router-link>
