@@ -7,11 +7,12 @@
     <!-- <h5 :title="remark" :class="{ welcome: isBlack }" @click="toggleBlack">
       {{ welcome }}
     </h5> -->
-
-    <img alt="你好" id="decorate" src="../assets/dragon-hi.jpg" /><br />
-    <p>用户名：<input v-model="username" placeholder="请输入你的用户名" /></p>
-    <br />
-    <button id="submitBtn" @click="submit">确定</button>
+    <div id="login-form" v-show="!isDelete">
+      <img alt="你好" id="decorate" src="../assets/dragon-hi.jpg" /><br />
+      <p>用户名：<input v-model="username" placeholder="请输入你的用户名" /></p>
+      <br />
+      <button id="submitBtn" @click="submit">确定</button>
+    </div>
   </div>
 </template>
 
@@ -24,6 +25,7 @@ export default {
       remark: "这是你",
       isBlack: true, //用于class绑定，与css搭配
       color: "blue",
+      isDelete: false
     };
   },
   methods: {
@@ -33,16 +35,9 @@ export default {
         alert("用户名不能为空!");
       } else {
         alert("欢迎你，" + this.username);
+        this.isDelete = true;
         this.welcome = "你好，" + this.username;
-        // this.elementDelete();
       }
-    },
-    //通过节点删除指定元素(有缺陷)
-    elementDelete() {
-      // let img = document.getElementsById("decorate");
-      // let btn = document.getElementsById("submitBtn");
-      // document.getElementsById("decorate").parentElement.removeChild(img);
-      // document.getElementsById("submitBtn").parentElement.removeChild(btn);
     },
     toggleColor() {
       this.color = this.color === "black" ? "blue" : "black"; //三元表达式实现颜色切换: 条件?true:false

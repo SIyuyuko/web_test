@@ -17,10 +17,13 @@ const routes = [
     component: () => import("../views/Form.vue"),
     children: [{
       path: 'infoform',
-      component:()=>import("../components/InfoForm.vue")
+      component: () => import("../components/InfoForm.vue")
     }, {
       path: 'caculator',
       component: () => import("../components/Caculator.vue")
+    }, {
+      path: 'todolist',
+      component: () => import("../components/todoList.vue")
     }],
   }, {
     //配置默认路由

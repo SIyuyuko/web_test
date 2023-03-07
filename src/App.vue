@@ -34,6 +34,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
 }
 
 nav {
@@ -51,6 +53,12 @@ nav a.router-link-exact-active {
 }
 
 header {
-  background-color: rgb(102, 205, 170, 0.2);
+  background-color: rgb(102, 205, 170, 0.1);
+}
+body {
+  background-image: url("./assets/neko-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 </style>

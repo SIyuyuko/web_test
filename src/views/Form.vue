@@ -4,6 +4,7 @@
     <nav>
       <router-link class="nav" to="/form/infoform">信息收集表</router-link>
       <router-link class="nav" to="/form/caculator">计算器</router-link>
+      <router-link class="nav" to="/form/todolist">备忘录</router-link>
     </nav>
     <router-view />
   </div>
