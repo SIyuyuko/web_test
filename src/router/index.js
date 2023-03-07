@@ -23,7 +23,7 @@ const routes = [
       component: () => import("../components/Caculator.vue")
     }, {
       path: 'todolist',
-      component: () => import("../components/todoList.vue")
+      component: () => import("../components/TodoList.vue")
     }],
   }, {
     //配置默认路由
