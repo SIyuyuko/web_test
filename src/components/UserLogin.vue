@@ -18,6 +18,7 @@
 
 <script>
 export default {
+  //data必须是一个函数
   data() {
     return {
       welcome: "",

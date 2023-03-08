@@ -18,13 +18,13 @@
 export default {
   data() {
     return {
-        list: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        isShow:true
+      list: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      isShow: true
     };
   },
   methods: {
     add() {
-       return this.list.push(this.list.length + 1);
+      return this.list.push(this.list.length + 1);
     },
     remove() {
       return this.list.pop();
@@ -32,13 +32,16 @@ export default {
     reverse() {
       return this.list.reverse();
     }
-  },
+  }, computed: {
+    filtList() {
+      return 0;
+    }
+  }
 };
 </script>
 <style>
 .split-line {
-  color:grey;
+  color: grey;
   font-weight: bold;
 }
-
 </style>

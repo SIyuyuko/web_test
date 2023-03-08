@@ -18,7 +18,7 @@
   </div>
 </template>
 <script>
-// import Login from "./views/Login.vue";
+// 全局注册的行为必须在根 Vue 实例 (通过 new Vue) 创建之前发生。
 import AboutView from "./views/AboutView.vue";
 import HomeView from "./views/HomeView.vue";
 export default {

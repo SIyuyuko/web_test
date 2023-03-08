@@ -14,6 +14,7 @@ export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Login",
   components: {
+    //组件复用:在模块系统中局部注册
     UserLogin
   },
 };
