@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  //data必须是一个函数
+  //data选项应始终被声明为一个函数(Vue3)
   data() {
     return {
       welcome: "",

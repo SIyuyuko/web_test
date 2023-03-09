@@ -64,6 +64,7 @@ export default {
     },
     showInfo() {
       return "姓名:" + this.name + '\n' + "年龄:" + this.age + '\n' + "是否毕业：" + this.isGraguated + '\n' + "最高学历:" + this.grade + '\n' + "意向职位:" + this.favMajors + '\n';
+      // return JSON.stringify(this.$data);
     }
   },
 };

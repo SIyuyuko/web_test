@@ -4,7 +4,7 @@
     <div class="content">
       <input v-model="name" style="font:inherit"><br><span class="some-about">{{someabout}}</span>
       <span>欢迎你：{{newName}}</span><br>
-      <span>新建备忘：<input v-model="todo.words" placeholder="Write down here" style="font:inherit">
+      <span>新建备忘：<input v-model.lazy="todo.words" placeholder="Write down here" style="font:inherit">
         <button class="Btn" @click="addTodo">添加</button><button class="Btn" @click="removeTodo">×</button>
       </span><br>
       <span>搜索：<input v-model="keyword" placeholder="请输入关键词" style="font:inherit"></span><br>
@@ -33,7 +33,7 @@ export default {
       this.todo.pop();
     }
   }, computed: {
-    //watch能实现的，computed都能实现，优先选择computed
+    //computed能实现的，watch都能实现，反过来不一定；优先选择computed
     newName: {
       //getter
       get: function () {
