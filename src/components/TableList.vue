@@ -1,6 +1,6 @@
 <template>
   <div class="list-page">
-    <button @click="isShow=!isShow">显示表格</button>
+    <button @click="isShow = !isShow">显示表格</button>
     <button @click="add">添加元素</button>
     <button @click="remove">删除元素</button>
     <button @click="reverse">翻转元素</button>

@@ -15,5 +15,8 @@
       "dom.iterable",
       "scripthost"
     ]
+  },
+  "vueCompilerOptions": {
+    "target": 2.7 //安装了vue3对应的插件volar之后打开了vue2版本的项目会导致issue报错:incorrect target，需要在jsconfig.json里主动指明当前版本
   }
 }
